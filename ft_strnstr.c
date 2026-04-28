@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allanbreu <allanbreu@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/21 16:15:20 by allanbreu         #+#    #+#             */
-/*   Updated: 2026/04/28 14:26:29 by allanbreu        ###   ########.fr       */
+/*   Created: 2026/04/28 13:34:40 by allanbreu         #+#    #+#             */
+/*   Updated: 2026/04/28 14:26:31 by allanbreu        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strchr(const char *s, int c)
+char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-    size_t i;
+    int i;
 
     i = 0;
-    while (s[i] != '\0')
+    if (needle == "")
+        return(haystack);
+    while (haystack[i] != '\0' && && len > 0)
     {
-        if (s[i] == c)
-            return (&s[i]);
+        if (haystack[i] == needle[i])
+        {
+            return(&haystack[i]);
+        }
         i++;
+        len--;
     }
-    if (c == '\0')
-        return (&s[i]);
     return (NULL);
 }
