@@ -3,19 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allanbreu <allanbreu@student.42.fr>        +#+  +:+       +#+        */
+/*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/21 11:04:08 by allanbreu         #+#    #+#             */
-/*   Updated: 2026/04/22 12:25:19 by allanbreu        ###   ########.fr       */
+/*   Created: 2026/04/20 14:01:51 by allferna          #+#    #+#             */
+/*   Updated: 2026/04/28 19:56:09 by allferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
-    size_t i;
+	int	i;
 
-    i = 0;
-    while (str[i] != '\0')
-        i++;
-    return (i);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }

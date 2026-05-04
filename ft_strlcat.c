@@ -3,36 +3,52 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allanbreu <allanbreu@student.42.fr>        +#+  +:+       +#+        */
+/*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 16:09:56 by allanbreu         #+#    #+#             */
-/*   Updated: 2026/04/28 14:26:26 by allanbreu        ###   ########.fr       */
+/*   Updated: 2026/05/04 16:23:24 by allferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t  ft_strlcat(char *  dst, const char *  src, size_t size)
+//#include "libft.h"
+#include <stdlib.h>
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-    size_t counter_one;
-    size_t counter_two;
-    size_t dst_length;
-    size_t src_length;
+	size_t	d_len;
+	size_t	s_len;
+	size_t	c_2;
 
-    counter_one = 0;
-    counter_two = 0;
+	d_len = 0;
+	s_len = 0;
+	c_2 = 0;
+	while (dst[d_len] != '\0')
+	{
+		d_len++;
+	}
+	while (src[s_len] != '\0')
+	{
+		s_len++;
+	}
+	if (d_len >= size)
+		return (size + s_len);
+	while (src[c_2] != '\0' && (c_2 + d_len) < (size - 1))
+	{
+		dst[d_len + c_2] = src[c_2];
+		c_2++;
+	}
+	dst[c_2 + d_len] = '\0';
+	return (d_len + s_len);
+}
 
-    if (size == 0)
-        return (ft_strlen (src_length(src)));// aqui é que se o size, a funçao ja retorna o tamanho que ela "teria"
-    dst_lenght = ft_strlen(dst);
-    src_lenght = ft_strlen(src);
-    while(dst[counter_one] != '\0')
-    {
-        counter_one++;// agora eu sei o tamnho que tem o dst...
-    }
-    while(src[counter_two] != '\0')//agora eu sei qual o tamanho total de src.. mas eu ainda preciso saber o quanto vai concatenar na dst
-    {
-        counter_two++;
-    }
-    while(dst[dst_length] != '\0' &&  )
-    {
-        dst[dst_length] = &src
-    }
+// #include <stdio.h>
+
+// int	main(void)
+// {
+// 	char	dst1[5] = "abc";
+// 	char	src1[5] = "def";
+// 	size_t	size;
+
+// 	size = 5;
+// 	printf("O tamanho total eh:\n%zu", ft_strlcat(dst1, src1, size));
+// }

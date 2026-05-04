@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allanbreu <allanbreu@student.42.fr>        +#+  +:+       +#+        */
+/*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 02:11:17 by allanbreu         #+#    #+#             */
-/*   Updated: 2026/04/21 11:02:41 by allanbreu        ###   ########.fr       */
+/*   Updated: 2026/05/04 19:31:21 by allferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if (c >= 'A' && c <= 'Z')
-        c += 32;
-    return (c);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }

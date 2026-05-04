@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/22 14:45:50 by allanbreu         #+#    #+#             */
-/*   Updated: 2026/05/04 15:11:39 by allferna         ###   ########.fr       */
+/*   Created: 2026/05/04 19:38:50 by allferna          #+#    #+#             */
+/*   Updated: 2026/05/04 20:47:37 by allferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
-{
-	size_t	counter;
-	size_t	lenght;
+#include "libft.h"
 
-	counter = 0;
-	lenght = 0;
-	while (src[lenght] != '\0')
-		lenght++;
-	if (!dstsize)
-		return (lenght);
-	while (src[counter] != '\0' && counter < (dstsize - 1))
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	unsigned char	s;
+	size_t			i;
+
+	i = 0;
+	while (i < n && s[i] != '\0')
 	{
-		dst[counter] = src[counter];
-		counter++;
+		if (s[i] == c)
+		{
+			return
+		}
+		i++;
 	}
-	dst[counter] = '\0';
-	return (lenght);
+	return ()
+}
+int	main(void)
+{
+	char	s[] = "Hello UORDI";
+
+	printf("Found:%s", ft_memchr(s, "U", 5));
+	return (0);
 }

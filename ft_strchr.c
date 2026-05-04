@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allanbreu <allanbreu@student.42.fr>        +#+  +:+       +#+        */
+/*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 16:15:20 by allanbreu         #+#    #+#             */
-/*   Updated: 2026/04/28 14:26:29 by allanbreu        ###   ########.fr       */
+/*   Updated: 2026/04/28 14:34:44 by allferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while (s[i] != '\0')
-    {
-        if (s[i] == c)
-            return (&s[i]);
-        i++;
-    }
-    if (c == '\0')
-        return (&s[i]);
-    return (NULL);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+			return (&s[i]);
+		i++;
+	}
+	if (c == '\0')
+		return (&s[i]);
+	return (NULL);
 }
