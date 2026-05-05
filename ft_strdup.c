@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/22 12:47:44 by allanbreu         #+#    #+#             */
-/*   Updated: 2026/05/05 16:16:55 by allferna         ###   ########.fr       */
+/*   Created: 2026/05/05 20:58:25 by allferna          #+#    #+#             */
+/*   Updated: 2026/05/05 21:02:40 by allferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
-{
-	size_t	i;
-	char	*last;
+#include "libft.h"
 
-	last = NULL;
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c)
-			last = &s[i];
-		i++;
-	}
-	if (c == '\0')
-		return (&s[i]);
-	return (last);
+char *ft_strndup(const char *s, size_t n)
+{
+
+    void* ptr;
+    size_t size;
+
+    size = ft_strlen(s);
 }

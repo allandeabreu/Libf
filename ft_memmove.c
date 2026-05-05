@@ -6,24 +6,29 @@
 /*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 18:29:27 by allferna          #+#    #+#             */
-/*   Updated: 2026/04/28 19:58:34 by allferna         ###   ########.fr       */
-/*                                             eeeeeeeeeeeee                               */
+/*   Updated: 2026/05/05 17:47:34 by allferna         ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-int	ft_strlen(const char *str);
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char *d;
-	unsigned char *s;
-	size_t i;
+	unsigned char	*d;
+	unsigned char	*s;
+	size_t			i;
 
 	i = 0;
+	if (!dest && !src)
+		return (NULL);
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
-
-	if (s > d)
+	if (d > s)
+	{
+		while (n--)
+			d[n] = s[n];
+	}
+	else
 	{
 		while (i < n)
 		{
@@ -31,15 +36,18 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			i++;
 		}
 	}
-	else
-	{
-		i = ft_strlen((const char *)s);
-		while (i > 0 && n > 0)
-		{
-			d[i] = s[i];
-			i--;
-            n--;
-		}
-	}
-    return (dest);
+	return (dest);
 }
+// #include <stdio.h>
+
+// int	main(void)
+// {
+// 	char	str1[] = "0123";
+// 	char	str2[] = "546";
+
+// 	printf("Antes %s\n", str1);
+
+// 	ft_memmove(str2, str1, 10);
+// 	printf("Depois %s\n", str2);
+// 	return (0);
+// }

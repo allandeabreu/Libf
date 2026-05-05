@@ -6,14 +6,13 @@
 /*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 18:01:36 by allferna          #+#    #+#             */
-/*   Updated: 2026/04/28 19:08:17 by allferna         ###   ########.fr       */
+/*   Updated: 2026/05/05 17:33:08 by allferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <stddef.h>
+#include "libft.h"
 
-void	*ft_memcpy(void *dest, const char *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;
 	const unsigned char	*s;
@@ -31,15 +30,13 @@ void	*ft_memcpy(void *dest, const char *src, size_t n)
 	}
 	return (dest);
 }
-#include <stdio.h>
+// #include <stdio.h>
 
-int	main(void)
-{
-    char srcA[50]= "abcdef";
-    char srcB[50]= "abcdef";
-
-    printf("\t  %s\n", srcA);
-	printf("src < dest = %s\n", (char *)ft_memcpy(srcA, &srcA[2], 6));
-	printf("src > dest = %s\n", (char *)ft_memcpy(&srcB[2], srcB, 6));
-
-}
+// int	main(void)
+// {
+//     char srcA[50]= "abcdef";
+//     char srcB[50]= "abcdef";
+//     printf("\t  %s\n", srcA);
+// 	printf("src < dest = %s\n", (char *)ft_memcpy(srcA, &srcA[2], 6));
+// 	printf("src > dest = %s\n", (char *)ft_memcpy(&srcB[2], srcB, 6));
+// }

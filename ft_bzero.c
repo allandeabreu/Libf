@@ -6,9 +6,11 @@
 /*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 16:17:52 by allferna          #+#    #+#             */
-/*   Updated: 2026/04/28 18:00:10 by allferna         ###   ########.fr       */
+/*   Updated: 2026/05/05 16:17:56 by allferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
