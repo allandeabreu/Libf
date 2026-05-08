@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allanbreu <allanbreu@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/05 20:58:25 by allferna          #+#    #+#             */
-/*   Updated: 2026/05/06 13:01:26 by allanbreu        ###   ########.fr       */
+/*   Created: 2026/05/07 18:01:43 by allanbreu         #+#    #+#             */
+/*   Updated: 2026/05/08 09:23:08 by allanbreu        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+void ft_putstr_fd(char *s, int fd)
 {
+    size_t i;
 
-    void* ptr;
-    size_t size;
-
-    size = ft_strlen(s);
-    ptr = malloc(size + 1);
-    if (!ptr)
-        return(NULL);
-    ft_strlcpy(ptr, s, size + 1);
-    return(ptr);
+    i = 0;
+    while (s[i] != '\0')
+    {
+        ft_putchar_fd(s[i], fd);
+        i++;
+    }
 }
-// #include <stdio.h>
-// int main()
-// {
-//     char s1[] = "uai";
-//     printf("a string duplicada eh:%s\n", ft_strdup(s1));
-//     return 0;
-// }

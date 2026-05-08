@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: allanbreu <allanbreu@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 14:01:51 by allferna          #+#    #+#             */
-/*   Updated: 2026/04/28 19:56:09 by allferna         ###   ########.fr       */
+/*   Updated: 2026/05/06 12:56:37 by allanbreu        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 

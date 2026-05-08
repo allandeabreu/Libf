@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allanbreu <allanbreu@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/05 20:58:25 by allferna          #+#    #+#             */
-/*   Updated: 2026/05/06 13:01:26 by allanbreu        ###   ########.fr       */
+/*   Created: 2026/05/06 13:04:37 by allanbreu         #+#    #+#             */
+/*   Updated: 2026/05/07 02:38:48 by allanbreu        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+void ft_putchar_fd(char c, int fd)
 {
-
-    void* ptr;
-    size_t size;
-
-    size = ft_strlen(s);
-    ptr = malloc(size + 1);
-    if (!ptr)
-        return(NULL);
-    ft_strlcpy(ptr, s, size + 1);
-    return(ptr);
+    write(fd, &c, 1);
+    return;
 }
-// #include <stdio.h>
 // int main()
 // {
-//     char s1[] = "uai";
-//     printf("a string duplicada eh:%s\n", ft_strdup(s1));
+//    ft_putchar_fd('A', 1);
 //     return 0;
 // }
