@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allanbreu <allanbreu@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/22 12:47:44 by allanbreu         #+#    #+#             */
-/*   Updated: 2026/05/11 19:48:11 by allanbreu        ###   ########.fr       */
+/*   Created: 2026/05/09 15:58:45 by allanbreu         #+#    #+#             */
+/*   Updated: 2026/05/11 19:48:15 by allanbreu        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
-{
-	size_t	i;
-	char	*last;
+#include "libft.h"
 
-	last = NULL;
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c)
-			last = &s[i];
-		i++;
-	}
-	if (c == '\0')
-		return (&s[i]);
-	return (last);
+char *ft_strtrim(char const *s1, char const *set)
+{
+    size_t i;
+    size_t j;
+
+    i = 0;
+    j = 0;
+    while (s1[i] != '\0')
+    {
+        if( s1[i] == set[j])
+    }
 }
