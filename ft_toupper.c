@@ -6,9 +6,11 @@
 /*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 22:43:08 by allanbreu         #+#    #+#             */
-/*   Updated: 2026/05/04 19:31:07 by allferna         ###   ########.fr       */
+/*   Updated: 2026/05/08 20:24:15 by allferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

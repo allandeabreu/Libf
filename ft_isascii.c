@@ -6,9 +6,11 @@
 /*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 13:55:49 by allferna          #+#    #+#             */
-/*   Updated: 2026/04/20 13:57:45 by allferna         ###   ########.fr       */
+/*   Updated: 2026/05/08 20:24:46 by allferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

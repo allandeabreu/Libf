@@ -6,22 +6,24 @@
 /*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 16:15:20 by allanbreu         #+#    #+#             */
-/*   Updated: 2026/04/28 14:34:44 by allferna         ###   ########.fr       */
+/*   Updated: 2026/05/11 21:51:40 by allferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
-			return (&s[i]);
+		if ((unsigned char)s[i] == (unsigned char)c)
+			return ((char *)&s[i]);
 		i++;
 	}
-	if (c == '\0')
-		return (&s[i]);
+	if ((unsigned char)c == '\0')
+		return ((char *)&s[i]);
 	return (NULL);
 }

@@ -6,9 +6,11 @@
 /*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 13:59:15 by allferna          #+#    #+#             */
-/*   Updated: 2026/04/20 14:01:15 by allferna         ###   ########.fr       */
+/*   Updated: 2026/05/08 20:24:55 by allferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
