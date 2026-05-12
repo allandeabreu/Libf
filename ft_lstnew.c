@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/22 12:47:44 by allanbreu         #+#    #+#             */
-/*   Updated: 2026/05/12 20:27:57 by allferna         ###   ########.fr       */
+/*   Created: 2026/05/10 19:19:59 by allferna          #+#    #+#             */
+/*   Updated: 2026/05/12 19:32:56 by allferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+t_list	*ft_lstnew(void *content)
 {
-	int				i;
-	unsigned char	uc;
+	t_list	*new_node;
 
-	uc = (unsigned char)c;
-	i = 0;
-	while (s[i])
-		i++;
-	while (i >= 0)
-	{
-		if ((unsigned char)s[i] == uc)
-			return ((char *)&s[i]);
-		i--;
-	}
-	return (NULL);
+	new_node = (t_list *)malloc(sizeof(t_list));
+	if (!new_node)
+		return (NULL);
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
 }

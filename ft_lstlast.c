@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: allferna <allferna@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/22 12:47:44 by allanbreu         #+#    #+#             */
-/*   Updated: 2026/05/12 20:27:57 by allferna         ###   ########.fr       */
+/*   Created: 2026/05/12 19:49:32 by allferna          #+#    #+#             */
+/*   Updated: 2026/05/12 19:50:59 by allferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int				i;
-	unsigned char	uc;
-
-	uc = (unsigned char)c;
-	i = 0;
-	while (s[i])
-		i++;
-	while (i >= 0)
+	if (!lst)
+		return (NULL);
+	while (lst->next != NULL)
 	{
-		if ((unsigned char)s[i] == uc)
-			return ((char *)&s[i]);
-		i--;
+		lst = lst->next;
 	}
-	return (NULL);
+	return (lst);
 }
